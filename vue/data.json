@@ -1,0 +1,25 @@
+{
+  "name": " 狂神说 JAVA",
+   "url": "https://blog.kuangstudy.com",
+  "page": 1,
+  "isNonProfit": true,
+  "address": {
+    "street": "含光门",
+    "city": "陕西西安",
+    "country": "中国"
+  },
+  "links": [
+    {
+     "name": "billbill",
+     "url": "https://space.blili.com/95256499"
+    },
+    {
+      "name": "狂神说JAVA",
+      "url": "https://blog.kuangstudy.com"
+    },
+    {
+      "name": "百度",
+      "url": "https:/www.baidu.com"
+    }
+  ]
+}
