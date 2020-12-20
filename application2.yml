@@ -1,0 +1,18 @@
+#spring配置
+spring:
+  profiles:
+    active: dev
+
+---
+#spring配置
+spring:
+  profiles: dev
+  application:
+    name: springcloud-provider-dept
+
+---
+#spring配置
+spring:
+  profiles: dev
+  application:
+    name: springcloud-provider-test
