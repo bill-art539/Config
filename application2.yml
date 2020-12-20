@@ -13,6 +13,6 @@ spring:
 ---
 #spring配置
 spring:
-  profiles: dev
+  profiles: test
   application:
     name: springcloud-provider-test
