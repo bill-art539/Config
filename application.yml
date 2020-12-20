@@ -1,3 +1,5 @@
+server:
+  port: 8201
 #spring配置
 spring:
   profiles: dev
@@ -8,16 +10,18 @@ spring:
 eureka:
   client:
     service-url:
-      defalutZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
+      defalutZone: http://eureka7001.com:7001/eureka/
 
 
 ---
+server:
+  port: 8202
 #spring配置
 spring:
-  profiles: dev
+  profiles: test
   application:
-    name: springcloud-provider-dept
-
+    name: springcloud-provider-test
+#Eureka的配置，，服务器注册到哪里
 eureka:
   client:
     service-url:
