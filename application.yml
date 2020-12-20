@@ -1,28 +1,39 @@
+spring:
+  profiles:
+    active: dev
+
+---
 server:
-  port: 8201
+  port: 7001
 #spring配置
 spring:
   profiles: dev
   application:
-    name: springcloud-provider-dept
-
-#Eureka的配置，，服务器注册到哪里
+    name: springcloud-config-eureka
+#Eureka配置
 eureka:
+  instance:
+    hostname: eureka7003.com #Eureka服务端的实例名称
   client:
-    service-url:
-      defalutZone: http://eureka7001.com:7001/eureka/
-
+    register-with-eureka: false # 表示是否向eureka注册中心注册自己
+    fetch-registry: false #fetch-registry如果为false，则表示自己为注册中心
+    service-url:  # 监控页面~
+      defaultZone: http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
 
 ---
 server:
-  port: 8202
+  port: 7002
 #spring配置
 spring:
   profiles: test
   application:
-    name: springcloud-provider-test
-#Eureka的配置，，服务器注册到哪里
+    name: springcloud-config-eureka
+#Eureka配置
 eureka:
+  instance:
+    hostname: eureka7003.com #Eureka服务端的实例名称
   client:
-    service-url:
-      defaultZone: http://eureka7002.com:7001/eureka/
+    register-with-eureka: false # 表示是否向eureka注册中心注册自己
+    fetch-registry: false #fetch-registry如果为false，则表示自己为注册中心
+    service-url:  # 监控页面~
+      defaultZone: http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
